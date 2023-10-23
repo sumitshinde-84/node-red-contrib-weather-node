@@ -1,0 +1,51 @@
+<!-- register weather-data node -->
+<script type="text/javascript">
+    RED.nodes.registerType('weather-data',{
+        category: 'weather',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            location: {value: ""}
+        },
+        credentials: {
+            mapbox_key: {type: "password"},
+            weatherstack_key: {type: "password"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-cloud",
+        label: function() {
+            return this.name||"weather-data";
+        }
+    });
+</script>
+<!-- Define setting UI for weather-data node -->
+<script type="text/html" data-template-name="weather-data">
+    <div class="form-row">
+        <label><i class="fa fa-tag"></i><span data-i18n="weather-
+         data.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="
+         [placeholder]weather-data.label.name">
+    </div>
+    <div class="form-row">
+        <label><i class="fa fa-map-marker"></i><span data-
+         i18n="weather-data.label.location"></span></label>
+        <input type="text" id="node-input-location" data-i18n="
+         [placeholder]weather-data.label.location">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mapbox_key"><i class="fa fa-globe">
+         </i><span data-i18n="weather-data.label.mapbox_key"></span>
+        </label>
+        <input type="password" id="node-input-mapbox_key" data-i18n=
+         "[placeholder]weather-data.label.mapbox_key_placeholder">
+    </div>
+    <div class="form-row">
+        <label for="node-input-weatherstack_key"><i class=
+         "fa fa-thermometer-three-quarters"></i><span data-i18n=
+         "weather-data.label.weatherstack_key"></span></label>
+        <input type="password" id="node-input-weatherstack_key" 
+         data-i18n="[placeholder]weather-data.label.
+                     weatherstack_key_placeholder">
+    </div>
+</script>

@@ -1,0 +1,12 @@
+{
+  "weather-data": {
+    "label": {
+      "name": " Name",
+      "location": " Location",
+      "mapbox_key": " mapbox",
+      "mapbox_key_placeholder": "Enter mapbox access token",
+      "weatherstack_key": " weatherstack",
+      "weatherstack_key_placeholder": "Enter weather access key"
+    }
+  }
+}

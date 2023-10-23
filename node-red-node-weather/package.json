@@ -1,0 +1,25 @@
+{
+  "name": "node-red-contrib-weather-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "weather.js",
+  "node-red": {
+    "nodes": {
+      "weather-data": "weather.js"
+    }
+  },
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\""
+  },
+  "author": "sumit shinde",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "mocha": "^10.2.0",
+    "node-red": "^3.1.0",
+    "node-red-node-test-helper": "^0.3.2"
+  }
+}
